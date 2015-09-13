@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/scaled_background"
+    tools:context=".MainGameActivity">
+
+    <EditText
+        android:id="@+id/editData"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <Button
+        android:id="@+id/btnStoreData"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editData"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92dp"
+        android:onClick="storeData"
+        android:text="Store Data" />
+
+    <Button
+        android:id="@+id/btnNextActivity"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnStoreData"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btnStoreData"
+        android:layout_marginBottom="41dp"
+        android:onClick="switchActivity"
+        android:text="Switch Activity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tvSQL"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/btnStoreData"
+        android:layout_alignEnd="@+id/btnStoreData"
+        android:layout_marginTop="104dp" />
+
+</RelativeLayout>
