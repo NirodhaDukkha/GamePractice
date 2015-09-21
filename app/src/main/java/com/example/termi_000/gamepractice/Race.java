@@ -17,7 +17,6 @@ public class Race {
     private String wisdom = "0";
     private String charisma = "0";
     private String size = "player size";
-    private String gitTest = "fuck";
 
     public void setId( long id){
         this.id = id;

@@ -14,8 +14,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.io.CharArrayReader;
-
 public class MainGameActivity extends Activity {
 
     RaceDataSource raceData;

@@ -4,9 +4,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.provider.ContactsContract;
-
-import com.example.termi_000.gamepractice.DatabaseHelper;
 
 /**
  * Created by termi_000 on 9/10/2015.
