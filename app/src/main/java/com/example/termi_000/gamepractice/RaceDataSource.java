@@ -31,7 +31,7 @@ public class RaceDataSource {
 
     public Race create(Race race){
         ContentValues values = new ContentValues();
-        values.put(DatabaseHelper.COLUMN_TITLE, race.getTitle());
+//        values.put(DatabaseHelper.COLUMN_RACE, race.getRace());
         values.put(DatabaseHelper.COLUMN_RACE, race.getRace());
         values.put(DatabaseHelper.COLUMN_STRENGTH, race.getStrength());
         values.put(DatabaseHelper.COLUMN_DEXTERITY, race.getDexterity());
@@ -42,7 +42,7 @@ public class RaceDataSource {
         values.put(DatabaseHelper.COLUMN_SIZE, race.getSize());
 
         long insertId = database.insert(DatabaseHelper.COLUMN_TITLE, null, values);
-        race.setId(insertId);
+//        race.setId(insertId);
         return race;
 
     }

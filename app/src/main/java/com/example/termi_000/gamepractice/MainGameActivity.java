@@ -3,6 +3,7 @@ package com.example.termi_000.gamepractice;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.CharArrayBuffer;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -12,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.io.CharArrayReader;
 
 public class MainGameActivity extends Activity {
 
@@ -65,13 +68,13 @@ public class MainGameActivity extends Activity {
         super.onResume();
         raceData.open();
         createData();
-        TextView tvTest = (TextView) findViewById(R.id.tvSQL);
-        ContentValues values = new ContentValues();
-        Cursor c = raceData.database.rawQuery("Select * from race_table", null);
+        String[] projection = {DatabaseHelper.COLUMN_RACE, DatabaseHelper.COLUMN_STRENGTH};
+        String sortOrder = DatabaseHelper.COLUMN_STRENGTH + " DESC";
+        Cursor c = raceData.database.query("race_table", projection, null, null, null, null, null);
         c.moveToFirst();
-        String myRace = c.getString(0);
-        String myStrength = c.getString(1);
-        tvTest.setText("My Race = " + myRace + " and the Strength Mod = " + myStrength);
+        String strength = "race is" + c.getString(0) + " and strength is " + c.getString(1);
+        TextView tvTest = (TextView) findViewById(R.id.tvSQL);
+        tvTest.setText(strength);
     }
 
     @Override
@@ -82,7 +85,8 @@ public class MainGameActivity extends Activity {
 
     private void createData(){
         Race race = new Race();
-        race.setRace("bitch ass drow");
+        race.setRace("Orc");
+        race.setStrength("7");
         raceData.create(race);
     }
 }

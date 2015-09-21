@@ -26,6 +26,14 @@ public class Race {
         return id;
     }
 
+    public void setTitle(String title){
+        this.title = title;
+    }
+
+    public void setStrength(String strength){
+        this.strength = strength;
+    }
+
     public String getTitle(){
         return title;
     }
