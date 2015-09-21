@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 /**
  * Created by termi_000 on 9/8/2015.
  */
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class RaceOpenDBHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "race.db";
     public static final int DATABASE_VERSION = 1;
@@ -34,7 +34,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     ")";
 
 
-    public DatabaseHelper(Context context) {
+    public RaceOpenDBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 

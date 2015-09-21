@@ -18,61 +18,79 @@ public class Race {
     private String charisma = "0";
     private String size = "player size";
 
-    public void setId( long id){
+    public void setId(long id) {
         this.id = id;
     }
 
-    public long getId(){
+    public long getId() {
         return id;
     }
 
-    public void setTitle(String title){
-        this.title = title;
-    }
-
-    public void setStrength(String strength){
-        this.strength = strength;
-    }
-
-    public String getTitle(){
+    public String getTitle() {
         return title;
     }
 
-    public String getRace(){
+    public String getRace() {
         return race;
     }
 
-    public void setRace(String race){
+    public void setRace(String race) {
         this.race = race;
     }
 
-    public String getStrength(){
+    public String getStrength() {
         return strength;
     }
 
-    public String getDexterity(){
+    public void setStrength(String strength) {
+        this.strength = strength;
+    }
+
+    public String getDexterity() {
         return dexterity;
     }
 
-    public String getConstitution(){
+    public void setDexterity(String dexterity) {
+        this.dexterity = dexterity;
+    }
+
+    public String getConstitution() {
         return constitution;
     }
 
-    public String getIntelligence(){
+    public void setConstitution(String constitution) {
+        this.constitution = constitution;
+    }
+
+    public String getIntelligence() {
         return intelligence;
     }
 
-    public String getWisdom(){
+    public void setIntelligence(String intelligence) {
+        this.intelligence = intelligence;
+    }
+
+    public String getWisdom() {
         return wisdom;
     }
 
-    public String getCharisma(){
+    public void setWisdom(String wisdom) {
+        this.wisdom = wisdom;
+    }
+
+    public String getCharisma() {
         return charisma;
     }
 
-    public String getSize(){
+    public void setCharisma(String charisma) {
+        this.charisma = charisma;
+    }
+
+    public String getSize() {
         return size;
     }
 
-
+    public void setSize(String size) {
+        this.size = size;
+    }
 }

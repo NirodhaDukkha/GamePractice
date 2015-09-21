@@ -14,7 +14,7 @@ public class RaceDataSource {
     SQLiteDatabase database;
 
     public RaceDataSource(Context context){
-        dbhelper = new DatabaseHelper(context);
+        dbhelper = new RaceOpenDBHelper(context);
     }
 
     void open(){
@@ -28,17 +28,17 @@ public class RaceDataSource {
 
     public Race create(Race race){
         ContentValues values = new ContentValues();
-//        values.put(DatabaseHelper.COLUMN_RACE, race.getRace());
-        values.put(DatabaseHelper.COLUMN_RACE, race.getRace());
-        values.put(DatabaseHelper.COLUMN_STRENGTH, race.getStrength());
-        values.put(DatabaseHelper.COLUMN_DEXTERITY, race.getDexterity());
-        values.put(DatabaseHelper.COLUMN_CONSTITUTION, race.getConstitution());
-        values.put(DatabaseHelper.COLUMN_INTELLIGENCE, race.getIntelligence());
-        values.put(DatabaseHelper.COLUMN_WISDOM, race.getWisdom());
-        values.put(DatabaseHelper.COLUMN_CHARISMA, race.getCharisma());
-        values.put(DatabaseHelper.COLUMN_SIZE, race.getSize());
+//        values.put(RaceOpenDBHelper.COLUMN_RACE, race.getRace());
+        values.put(RaceOpenDBHelper.COLUMN_RACE, race.getRace());
+        values.put(RaceOpenDBHelper.COLUMN_STRENGTH, race.getStrength());
+        values.put(RaceOpenDBHelper.COLUMN_DEXTERITY, race.getDexterity());
+        values.put(RaceOpenDBHelper.COLUMN_CONSTITUTION, race.getConstitution());
+        values.put(RaceOpenDBHelper.COLUMN_INTELLIGENCE, race.getIntelligence());
+        values.put(RaceOpenDBHelper.COLUMN_WISDOM, race.getWisdom());
+        values.put(RaceOpenDBHelper.COLUMN_CHARISMA, race.getCharisma());
+        values.put(RaceOpenDBHelper.COLUMN_SIZE, race.getSize());
 
-        long insertId = database.insert(DatabaseHelper.COLUMN_TITLE, null, values);
+        long insertId = database.insert(RaceOpenDBHelper.COLUMN_TITLE, null, values);
 //        race.setId(insertId);
         return race;
 
